@@ -1,14 +1,10 @@
-const http = require("http");
+const http = require("node:http");
 
-const server = http.createServer((req, res) => {
-  if ((req.url = "/")) {
-    res.writeHead(200, { "content-type": "text/plain" });
-    res.write("hey wassup you finaaly write your first serer ");
-    res.end;
-  } else {
-    res.writeHead(404, { "content-type": "text/plain" });
-    res.end("404 not founds");
+const server = http.createServer(function (req, res) {
+  if (req.url === "/getSecretData") {
+    res.end("There is No secret Data");
+    return;
   }
+  res.end("hello world");
 });
-
-server.listen(3000, () => console.log("server running"));
+server.listen(7777);
