@@ -1,4 +1,4 @@
-require("./xyz"); // one module  into naother
+require("./LearningPhase/xyz"); // one module  into naother
 // const { calculateSum } = require("./calculate/sum.js");
 // // import { calculateSum } from "./sum.js";
 // const { multiply } = require("./calculate/multiply.js");
@@ -6,7 +6,7 @@ require("./xyz"); // one module  into naother
 const util = require("node:util");
 
 const { calculateSum, multiply } = require("./calculate");
-const data = require("./data.json");
+const data = require("./LearningPhase/data.json");
 console.log(JSON.stringify(data));
 var name = "namaste node js ";
 var a = 10;
